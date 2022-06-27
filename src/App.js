@@ -28,6 +28,7 @@ function App() {
       <SayMyName nome={name}/> {/* passando via variavel o valor da propriedade nome para o componente */}
       <Pessoa nome="Raissa" idade={17} profissao="Estudante" foto={fotoPessoa}
       />
+      <h1>Testando CSS</h1>
     </div>
   );
 }

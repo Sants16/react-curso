@@ -1,4 +1,18 @@
-body {
+body{
+  padding: 10px;
+  background-color: aquamarine;
+}
+
+h1{
+  color: rgb(0, 0, 0);
+}
+
+p{
+  background-color: rgb(8, 153, 153);
+  color: white;
+}
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +24,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
