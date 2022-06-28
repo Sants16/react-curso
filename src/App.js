@@ -1,5 +1,6 @@
 import './App.css';
 import HelloWorld from './components/HelloWorld';
+import List from './components/List';
 import Pessoa from './components/Pessoa';
 import SayMyName from './components/SayMyName';
 
@@ -29,6 +30,8 @@ function App() {
       <Pessoa nome="Raissa" idade={17} profissao="Estudante" foto={fotoPessoa}
       />
       <h1>Testando CSS</h1>
+      <p>\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\</p>
+      <List/>
     </div>
   );
 }
