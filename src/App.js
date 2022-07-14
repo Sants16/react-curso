@@ -1,9 +1,11 @@
 import './App.css';
+import Condicional from './components/Condicional';
 import Evento from './components/Evento';
 import Form from './components/Form';
 import HelloWorld from './components/HelloWorld';
 import List from './components/List';
 import Pessoa from './components/Pessoa';
+import RendLista from './components/RendLista';
 import SayMyName from './components/SayMyName';
 
 function App() {
@@ -16,6 +18,9 @@ function App() {
   function multi(n,m){
     return n*m;
   }
+
+  //lista
+  const meusItens = ['React' , 'Vue', 'Angular']
 
   return ( //tudo após o return ate o seu final é um JSX, JSX é o HTML do React entretando precisamos respeitar mais as regras da linguagem HTML no JSX do que no próprio HTML. Podemos também inserir atributos e valores para os atributos do JSX assim como no HTML porém com algumas diferentes, eles são escritos em camelCase EX: className.
     <div className='App'>
@@ -34,6 +39,11 @@ function App() {
       <h1>Testando Eventos</h1>
       <Evento numero='3'/>
       <Form/>
+      <h1>Renderização Condicional</h1>
+      <Condicional/>
+      <h1>Renderização de Listas</h1>
+      <RendLista itens={meusItens}/> {/* renderiza todos os itens do array meusItens na aplicação */}
+      <RendLista itens={[]}/>
     </div>
   );
 }
