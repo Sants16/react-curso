@@ -1,5 +1,8 @@
 import './App.css';
+
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
 import Condicional from './components/Condicional';
 import Evento from './components/Evento';
 import Form from './components/Form';
@@ -10,6 +13,9 @@ import RendLista from './components/RendLista';
 import SayMyName from './components/SayMyName';
 import SeuNome from './components/SeuNome';
 import Saudacao from './components/Saudacao';
+import Home from './pages/Home';
+import Contato from './pages/Contato';
+import Empresa from './pages/Empresa';
 
 
 function App() {
@@ -54,6 +60,25 @@ function App() {
       <h1>State Lift</h1>
       <SeuNome setNome={setNome}/> {/* passando o state por props do componente pai que no caso é o App.js para o componente filho que o SeuNome.jsx */}
       <Saudacao nome={nome}/>
+      <h1>React Router</h1>
+      <Router>
+        <ul>
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
+          <li>
+            <Link to='/empresa'>Empresa</Link>
+          </li>
+          <li>
+            <Link to='/contato'>Contato</Link>
+          </li>
+        </ul> 
+        <Routes>
+          <Route exact path='/' element={<Home/>}/>
+          <Route path='/contato' element={<Contato/>}/>
+          <Route path='/empresa' element={<Empresa/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
