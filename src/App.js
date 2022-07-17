@@ -1,7 +1,7 @@
 import './App.css';
 
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Condicional from './components/Condicional';
 import Evento from './components/Evento';
@@ -16,6 +16,8 @@ import Saudacao from './components/Saudacao';
 import Home from './pages/Home';
 import Contato from './pages/Contato';
 import Empresa from './pages/Empresa';
+import NavBar from './components/layout/NavBar';
+import Footer from './components/layout/Footer';
 
 
 function App() {
@@ -62,22 +64,14 @@ function App() {
       <Saudacao nome={nome}/>
       <h1>React Router</h1>
       <Router>
-        <ul>
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to='/empresa'>Empresa</Link>
-          </li>
-          <li>
-            <Link to='/contato'>Contato</Link>
-          </li>
-        </ul> 
+        <NavBar/>
         <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route path='/contato' element={<Contato/>}/>
           <Route path='/empresa' element={<Empresa/>}/>
         </Routes>
+        <Footer/>
+        {/* tudo fora do Routes não será substituido ou atualizado ao inves disso sera reaproveitado pagina a pagina */}
       </Router>
     </div>
   );

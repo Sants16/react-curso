@@ -1,7 +1,7 @@
 const Empresa = () => {
     return ( 
         <div>
-            <h1>Empresa</h1>
+            <h2>Empresa</h2>
             <p>Conteúdo da página</p>
         </div>
      );

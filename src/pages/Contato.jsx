@@ -1,7 +1,7 @@
 const Contato = () => {
     return ( 
         <div>
-            <h1>Contato</h1>
+            <h2>Contato</h2>
             <p>Conteúdo da página</p>
         </div>
      );
